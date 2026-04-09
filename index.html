@@ -995,12 +995,19 @@ footer {
 
 <!-- OVERLAY MENU -->
 <div class="overlay" id="overlay">
-  <div class="overlay-grid">
-    <div>
-      <div class="mi"><a href="https://evinitiative.network" class="mi-btn" style="text-decoration:none"><span class="mi-num">01</span><span class="mi-label">HOME</span></a></div>
-      <div class="mi" id="mCourses">
-        <button class="mi-btn" onclick="tog('mCourses')"><span class="mi-num">02</span><span class="mi-label">COURSES</span><span class="mi-icon">+</span></button>
-        <div class="mi-sub">
+  <button class="ov-close" id="ovClose">CLOSE</button>
+  <div class="ov-body">
+    <div class="ov-col">
+      <div class="omi">
+        <a href="https://evinitiative.network" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(1)</span><span class="omi-label">HOME</span>
+        </a>
+      </div>
+      <div class="omi" id="mCourses">
+        <button class="omi-row" onclick="tog('mCourses')">
+          <span class="omi-num">(2)</span><span class="omi-label">COURSES</span><span class="omi-indicator">+</span>
+        </button>
+        <div class="omi-sub">
           <a href="https://evinitiative.network/courses">EV Business Builder</a>
           <a href="https://evinitiative.network/join">EV Business Builder 2.0 <span class="ext">· Coming 2026</span></a>
           <a href="https://evinitiative.network/join">EV Investment Fundamentals <span class="ext">· Coming 2026</span></a>
@@ -1009,45 +1016,75 @@ footer {
           <a href="https://evinitiative.network/join">CPO Operations Masterclass <span class="ext">· Coming Soon</span></a>
         </div>
       </div>
-      <div class="mi" id="mProjects">
-        <button class="mi-btn" onclick="tog('mProjects')"><span class="mi-num">03</span><span class="mi-label">PROJECTS</span><span class="mi-icon">+</span></button>
-        <div class="mi-sub">
-          <a href="#mission-hills">Mission Hills — Active ↗</a>
-          <a href="https://eviinfra.com" target="_blank">Granada Hills — In Development ↗</a>
-          <a href="https://eviinfra.com" target="_blank">North Hills — Planning ↗</a>
-          <a href="https://eviinfra.com" target="_blank">Acton — Planning ↗</a>
+      <div class="omi" id="mProjects">
+        <button class="omi-row" onclick="tog('mProjects')">
+          <span class="omi-num">(3)</span><span class="omi-label">PROJECTS</span><span class="omi-indicator">+</span>
+        </button>
+        <div class="omi-sub">
+          <a href="#mission-hills">Mission Hills — Active</a>
+          <a href="https://eviinfra.com" target="_blank">Granada Hills — In Development</a>
+          <a href="https://eviinfra.com" target="_blank">North Hills — Planning</a>
+          <a href="https://eviinfra.com" target="_blank">Acton — Planning</a>
         </div>
       </div>
-      <div class="mi"><a href="https://evinitiative.com/driver-experience" class="mi-btn" style="text-decoration:none"><span class="mi-num">04</span><span class="mi-label">DRIVER EXPERIENCE</span></a></div>
-      <div class="mi"><a href="#what-you-get" class="mi-btn" style="text-decoration:none"><span class="mi-num">05</span><span class="mi-label">MEMBERSHIP</span></a></div>
+      <div class="omi">
+        <a href="https://evinitiative.com/driver-experience" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(4)</span><span class="omi-label">DRIVER EXPERIENCE</span>
+        </a>
+      </div>
+      <div class="omi">
+        <a href="#what-you-get" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(5)</span><span class="omi-label">MEMBERSHIP</span>
+        </a>
+      </div>
     </div>
-    <div>
-      <div class="mi"><a href="https://silver-mousse-ba4357.netlify.app/" target="_blank" class="mi-btn" style="text-decoration:none"><span class="mi-num">06</span><span class="mi-label" style="color:var(--green)">INVEST NOW ↗</span></a></div>
-      <div class="mi"><a href="https://eviinfra.com" target="_blank" class="mi-btn" style="text-decoration:none"><span class="mi-num">07</span><span class="mi-label">REAL ESTATE ↗</span></a></div>
-      <div class="mi"><a href="https://evinitiative.shop" target="_blank" class="mi-btn" style="text-decoration:none"><span class="mi-num">08</span><span class="mi-label">HARDWARE SHOP ↗</span></a></div>
-      <div class="mi"><a href="https://evinitiative.com/software" class="mi-btn" style="text-decoration:none"><span class="mi-num">09</span><span class="mi-label">SOFTWARE</span></a></div>
-      <div class="mi"><a href="https://evinitiative.com/about" class="mi-btn" style="text-decoration:none"><span class="mi-num">10</span><span class="mi-label">ABOUT</span></a></div>
+    <div class="ov-col">
+      <div class="omi">
+        <a href="https://silver-mousse-ba4357.netlify.app/" target="_blank" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(6)</span><span class="omi-label" style="color:var(--green)">INVEST NOW</span><span class="omi-indicator">↗</span>
+        </a>
+      </div>
+      <div class="omi">
+        <a href="https://eviinfra.com" target="_blank" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(7)</span><span class="omi-label">REAL ESTATE</span><span class="omi-indicator">↗</span>
+        </a>
+      </div>
+      <div class="omi">
+        <a href="https://evinitiative.shop" target="_blank" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(8)</span><span class="omi-label">HARDWARE SHOP</span><span class="omi-indicator">↗</span>
+        </a>
+      </div>
+      <div class="omi">
+        <a href="https://evinitiative.com/software" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(9)</span><span class="omi-label">SOFTWARE</span>
+        </a>
+      </div>
+      <div class="omi">
+        <a href="https://evinitiative.com/about" class="omi-row" style="text-decoration:none">
+          <span class="omi-num">(10)</span><span class="omi-label">ABOUT</span>
+        </a>
+      </div>
     </div>
   </div>
-
-  <div class="overlay-foot">
-    <div class="ov-contact">
-      <strong>EV Initiative</strong>
-      <p>2108 N ST Suite #4103, Sacramento, CA 95816</p>
-      <a href="sms:+14247865281">Text: (424) 786-5281</a>
-      <a href="tel:+18003223159">Call: 1-800-322-3159</a>
-      <a href="/cdn-cgi/l/email-protection#b2dbdcd4ddf2d7c4dbdcdbc6dbd3c6dbc4d79cd1dddf"><span class="__cf_email__" data-cfemail="234a4d454c6346554a4d4a574a42574a55460d404c4e">[email&#160;protected]</span></a>
-    </div>
-    <div class="ov-right">
-      <div class="ov-socials">
+  <div class="ov-foot">
+    <p class="ov-legal">EVI Infrastructure Inc is not a broker-dealer, funding portal, or investment adviser. All investment opportunities will be offered exclusively through a SEC-registered funding portal or broker-dealer. This website collects expressions of interest only.</p>
+    <div class="ov-foot-right">
+      <div class="ov-foot-col">
+        <h6>CONTACT</h6>
+        <p>2108 N ST Suite #4103</p>
+        <p>Sacramento, CA 95816</p>
+        <a href="mailto:info@evinitiative.com">info@evinitiative.com</a>
+        <a href="tel:+14247865281">(424) 786-5281</a>
+        <a href="tel:+18003223159">1-800-322-3159</a>
+      </div>
+      <div class="ov-foot-col">
+        <h6>SOCIALS</h6>
         <a href="https://www.linkedin.com/company/evinitiative" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/evinitiative" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@evinitiative" target="_blank">TikTok</a>
         <a href="https://www.youtube.com/@evinitiative" target="_blank">YouTube</a>
       </div>
-      <button class="theme-btn" id="themBtn"><span id="themIco">☀️</span><span id="themLbl">Light Mode</span></button>
     </div>
-    <p class="legal">EVI Infrastructure Inc is not a broker-dealer, funding portal, or investment adviser. All investment opportunities will be offered exclusively through a SEC-registered funding portal or broker-dealer. This website collects expressions of interest only.</p>
   </div>
 </div>
 
