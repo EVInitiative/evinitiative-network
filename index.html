@@ -1415,4 +1415,37 @@ function tog(id){
 }
 
 // Light/dark
-const btn  = docume
+const btn  = document.getElementById('themBtn');
+const ico  = document.getElementById('themIco');
+const lbl  = document.getElementById('themLbl');
+let dark = true;
+
+if(btn) btn.addEventListener('click', () => {
+  dark = !dark;
+  document.body.classList.toggle('light', !dark);
+  if(ico) ico.textContent = dark ? '☀️' : '🌙';
+  if(lbl) lbl.textContent = dark ? 'Light Mode' : 'Dark Mode';
+});
+
+// Smooth scroll for hash links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      closeMenu();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Scroll header background
+const header = document.querySelector('.header');
+if(header){
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+}
+</script>
+</body>
+</html>
